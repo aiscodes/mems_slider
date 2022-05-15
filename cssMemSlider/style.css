@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&family=Roboto:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.slider_content {
+  max-width: 60%;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+}
+
+.slide {
+  width: 25%;
+  transition: all 0.5s ease;
+  height: 70vh;
+}
+
+.slides_image {
+  width: 100%;
+  height: 100%;
+}
+
+.text_content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 60%;
+  margin: 5% auto;
+  align-items: center;
+}
+
+.text_content:active {
+  cursor: pointer;
+}
+
+.text_wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides_text {
+  display: flex;
+  width: 420%;
+}
+
+.text {
+  background: -webkit-linear-gradient(rgb(127, 179, 217) 0%, rgb(44, 45, 43) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+  font-size: 26px;
+  transition: all 0.4s ease;
+  padding: 0 0 0 1px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+.text:hover {
+  background: -webkit-linear-gradient( rgb(53, 48, 48)  0%, rgb(127, 179, 217) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+  font-size: 26px;
+  transition: all 3s ease;
+  padding: 0 0 0 1px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+.slides_button {
+  display: flex;
+  width: 100px;
+}
+
+.btn {
+  display: flex;
+  width: 25%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(166deg, rgba(36, 0, 3, 1) 0%, rgba(121, 9, 9, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.btn:hover .circle {
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+.btn:active .circle {
+  background-color: rgba(53, 133, 182, 0.596);
+}
+
+input {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#button1:checked~.slider_content>.slides>.first {
+  margin-left: 0;
+}
+
+#button2:checked~.slider_content>.slides>.first {
+  margin-left: -25%;
+}
+
+#button3:checked~.slider_content>.slides>.first {
+  margin-left: -50%;
+}
+
+#button4:checked~.slider_content>.slides>.first {
+  margin-left: -75%;
+}
+
+#button1:checked~.text_content>.text_wrapper>.slides_text>.text_one {
+  margin-left: 0;
+}
+
+#button2:checked~.text_content>.text_wrapper>.slides_text>.text_one {
+  margin-left: -25%;
+}
+
+#button3:checked~.text_content>.text_wrapper>.slides_text>.text_one {
+  margin-left: -50%;
+}
+
+#button4:checked~.text_content>.text_wrapper>.slides_text>.text_one {
+  margin-left: -75%;
+}
+
+#button1:checked~.text_content>.slides_button> :nth-child(1)>.circle {
+  background: transparent;
+  border: solid 3px rgb(22, 26, 65);
+}
+
+#button2:checked~.text_content>.slides_button> :nth-child(2)>.circle {
+  background: transparent;
+  border: solid 3px rgb(22, 26, 65);
+}
+
+#button3:checked~.text_content>.slides_button> :nth-child(3)>.circle {
+  background: transparent;
+  border: solid 3px rgb(22, 26, 65);
+}
+
+#button4:checked~.text_content>.slides_button> :nth-child(4)>.circle {
+  background: transparent;
+  border: solid 3px rgb(22, 26, 65);
+}
+
+@media (max-width: 1024px) {
+  .text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider_content {
+    max-width: 80%;
+  }
+
+  .text_content {
+    flex-direction: column-reverse;
+    max-width: 80%;
+  }
+
+  .slides_text {
+    margin: 5%;
+  }
+
+  .text {
+    font-size: 17px;
+  }
+  .text:hover {
+    font-size: 17px;
+  }
+  .text_wrapper {
+    align-self: start;
+    width: 100%;
+  }
+
+  .circle {
+    width: 12px;
+    height: 12px;
+  }
+}
