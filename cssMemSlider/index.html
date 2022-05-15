@@ -9,43 +9,59 @@
   </head>
   <body>
     <div class="container">
-      <input type="radio" name="slide" id="button1" checked />
-      <input type="radio" name="slide" id="button2" />
-      <input type="radio" name="slide" id="button3" />
-      <input type="radio" name="slide" id="button4" />
-      <div class="slider_content">
-        <div class="slides">
-          <div class="slide"><img src="./images/first.png" alt="first" class="slides_image" /></div>
-          <div class="slide"><img src="./images/second.jpeg" alt="second" class="slides_image" /></div>
-          <div class="slide"><img src="./images/third.gif" alt="third" class="slides_image" /></div>
-          <div class="slide"><img src="./images/fourth.jpeg" alt="fourth" class="slides_image" /></div>
+      <div class="slides_container">
+        <input type="radio" name="slide" id="button1" checked />
+        <input type="radio" name="slide" id="button2" />
+        <input type="radio" name="slide" id="button3" />
+        <input type="radio" name="slide" id="button4" />
+        <div class="slider_content">
+          <div class="slides">
+            <div class="slide first">
+              <img src="./images/first.png" alt="first" class="slides_image" />
+            </div>
+            <div class="slide">
+              <img
+                src="./images/second.jpeg"
+                alt="second"
+                class="slides_image"
+              />
+            </div>
+            <div class="slide">
+              <img src="./images/third.gif" alt="third" class="slides_image" />
+            </div>
+            <div class="slide">
+              <img
+                src="./images/fourth.jpeg"
+                alt="fourth"
+                class="slides_image"
+              />
+            </div>
+          </div>
         </div>
         <div class="text_content">
           <div class="text_wrapper">
             <div class="slides_text">
-              <p class="text">My code is working</p>
-              <p class="text">Junior programmers when they see their tasks</p>
-              <p class="text">it was amazing</p>
-              <p class="text">Fix bugs</p>
+              <p class="text text_one">My code is working</p>
+              <p class="text text_one">
+                Junior programmers when they see their tasks
+              </p>
+              <p class="text text_one">It was amazing</p>
+              <p class="text text_one">Fix bugs</p>
             </div>
           </div>
           <div class="slides_button">
-            <label for="button1"></label>
-            <button>
+            <label for="button1" class="btn">
               <div class="circle"></div>
-            </button>
-            <label for="button2"></label>
-            <button>
+            </label>
+            <label for="button2" class="btn">
               <div class="circle"></div>
-            </button>
-            <label for="button3"></label>
-            <button>
+            </label>
+            <label for="button3" class="btn">
               <div class="circle"></div>
-            </button>
-            <label for="button4"></label>
-            <button>
+            </label>
+            <label for="button4" class="btn">
               <div class="circle"></div>
-            </button>
+            </label>
           </div>
         </div>
       </div>
